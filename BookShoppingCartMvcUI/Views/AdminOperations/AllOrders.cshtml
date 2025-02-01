@@ -4,7 +4,7 @@
     ViewData["Title"] = "AllOrders";
 }
 <div style="width:100%" class="mt-2">
-    <h4> Orders</h4>
+    <h4 style="margin-left:550px;"> Orders</h4>
     @if (Model != null && Model.Count() > 0)
     {
         <table class="table table-striped">
@@ -34,7 +34,7 @@
                             Order-Detail
                         </button>
                         <a asp-action="UpdateOrderStatus" asp-route-orderId="@order.Id" class="btn btn-info">Change Order Status</a>
-                        <a asp-action="TogglePaymentStatus" asp-route-orderId="@order.Id" class="btn btn-info">Toggle Payment Status</a>
+                        <a asp-action="TogglePaymentStatus" asp-route-orderId="@order.Id" class="btn btn-info m-3">Toggle Payment Status</a>
 
                    @* appending modal div here *@
                    @* Make sure to put this partial tag inside this td block, otherwise it can cause layout related problem*@
